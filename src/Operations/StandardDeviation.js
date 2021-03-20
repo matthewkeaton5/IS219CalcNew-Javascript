@@ -1,4 +1,4 @@
-function StandardDeviation(){
-    return 0;
+function StandardDeviation(valueList){
+    return Math.std(valueList);
 }
 module.exports = StandardDeviation;

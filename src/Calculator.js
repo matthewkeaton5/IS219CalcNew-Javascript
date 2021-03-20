@@ -1,4 +1,5 @@
 const Calculation = require('./models/Calculation')
+const RandomNumbers = require('./models/RandomNumbers')
 const Sum = require('./Operations/Sum');
 const listSum = require('./Operations/listSum');
 const Difference = require('./Operations/Difference');
@@ -51,10 +52,10 @@ class Calculator {
         Calculator.Calculations.push(calculation);
         return calculation.GetResults();
     }
-    static RandomNoSeed(min,max){
-        let randomnumbers = new RandomNumbers(min,max);
-        Calculator.Calculations.push(randomnumbers);
-        return randomnumbers.GetResults();
+    static MinMaxNumber(min,max){
+        let randomNumbers = new RandomNumbers.MinMaxNumber(min,max);
+        Calculator.Calculations.push(randomNumbers);
+        return randomNumbers.GetResults();
     }
 }
 module.exports = Calculator;

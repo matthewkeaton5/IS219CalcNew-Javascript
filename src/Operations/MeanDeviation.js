@@ -1,4 +1,4 @@
 function MeanDeviation (valueList) {//Will look up what this really means later
-    return null;
+    return 0;
 }
 module.exports = MeanDeviation;

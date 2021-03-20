@@ -1,4 +1,5 @@
 const Calculation = require('../src/models/Calculation');
+const RandomNumbers = require('../src/models/RandomNumbers')
 const Sum = require('../src/Operations/Sum');
 const listSum = require('../src/Operations/listSum');
 const Difference = require('../src/Operations/Difference');
@@ -14,6 +15,12 @@ test('Test of Calculation Instantiation', () => {
     expect(calculation.b).toBe(2);
     expect(calculation.op).toBe(op);
 });
+test('Test of RandomNumbers Instantiation', () => {
+    //I need to test the instantiation of the calculation object
+    let randomNumbers = new RandomNumbers.MinMaxNumber(1,2);
+    expect(randomNumbers.min).toBe(1);
+    expect(randomNumbers.max).toBe(2);
+});
 test('Test Get results for Sum function', () => {
     //I need to test the get results function
 
@@ -27,33 +34,38 @@ test('Test Get results for listSum function', () => {
     let calculation = new Calculation.ListCalculations([1,2,3], op);
     expect(calculation.GetResults()).toBe(6);
 });
-test('Test Get results for Difference  function', () => {
+test('Test Get results for Difference function', () => {
     //I need to test the get results function
     let op = Difference;
     let calculation = new Calculation.SimpleCalculation(1,2,op);
     expect(calculation.GetResults()).toBe(-1);
 });
-test('Test Get results for Product  function', () => {
+test('Test Get results for Product function', () => {
     //I need to test the get results function
     let op = Product;
     var calculation = new Calculation.SimpleCalculation(1,2,op);
     expect(calculation.GetResults()).toBe(2);
 });
-test('Test Get results for Quotient  function', () => {
+test('Test Get results for Quotient function', () => {
     //I need to test the get results function
     let op = Quotient;
     let calculation = new Calculation.SimpleCalculation(1,2,op);
     expect(calculation.GetResults()).toBe(.5);
 });
-test('Test Get results for Square  function', () => {
+test('Test Get results for Square function', () => {
     //I need to test the get results function
     let op = Square;
     let calculation = new Calculation.SingleVarCalculations(2,op);
     expect(calculation.GetResults()).toBe(4);
 });
-test('Test Get results for SquareRoot  function', () => {
+test('Test Get results for SquareRoot function', () => {
     //I need to test the get results function
     let op = SquareRoot;
     let calculation = new Calculation.SingleVarCalculations(4,op);
     expect(calculation.GetResults()).toBe(2);
+});
+test('Test Get results for MinMaxNumbers function', () => {
+    //I need to test the get results function
+    let RandomNumbers = new RandomNumbers.MinMaxNumber(2,2);
+    expect(RandomNumbers.GetResults()).toBe(2);
 });

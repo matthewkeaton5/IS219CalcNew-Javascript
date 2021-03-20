@@ -78,13 +78,13 @@ test('Test Get results for MinMaxNumbers function', () => {
 });
 test('Test Get results for SeededNumbers function', () => {
     //I need to test the get results function
-    let randomNumbers = new RandomNumbers.SeededNumbers("Fuck",2,4);
+    let randomNumbers = new RandomNumbers.SeededNumbers("Hello",2,4);
 
     expect(isFloat(randomNumbers.GetResults())).toBeTruthy();
 });
 test('Test Get results for SeededNumbers function', () => {
     //I need to test the get results function
-    let randomNumbers = new RandomNumbers.SeededNumbers("Fuck",2,4);
+    let randomNumbers = new RandomNumbers.SeededNumbers("Hello",2,4);
 
     expect(isInt(randomNumbers.GetRounded())).toBeTruthy();
 });

@@ -29,8 +29,9 @@ class SeededNumbers extends RandomNumbers {
         this.seed = seed;
         this.min = min;
         this.max = max;
-        seedrandom(seed, {global:true})
-        this.response = Math.random() * (max-min) + min;
+        var test = seedrandom(seed);
+        console.log(test)
+        this.response = test * (max-min) + min;
     }
     GetResults(){
         console.log(this.response);
@@ -41,13 +42,15 @@ class SeededNumbers extends RandomNumbers {
         return Math.round(this.response);
     }
 }
+class RandomList extends RandomNumbers{
 
+}
 
 
 module.exports = {
     RandomNumbers : RandomNumbers,
     MinMaxNumber : MinMaxNumber,
     SeededNumbers : SeededNumbers,
-
+    RandomList : RandomList
 
 }

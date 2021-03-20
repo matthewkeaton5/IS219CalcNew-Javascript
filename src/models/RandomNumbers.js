@@ -10,9 +10,9 @@ class MinMaxNumber extends RandomNumbers{
         this.min = min;
         this.max = max;
 
-        let test = Math.random() * (max-min) + min
 
-        this.randomNumber = test;
+
+        this.randomNumber = Math.random() * (max-min) + min;
     }
     GetResults(){
         console.log(this.randomNumber)
@@ -29,9 +29,9 @@ class SeededNumbers extends RandomNumbers {
         this.seed = seed;
         this.min = min;
         this.max = max;
-        var test = seedrandom(seed);
-        console.log(test)
-        this.response = test * (max-min) + min;
+        var rng = seedrandom(seed);
+        console.log(rng())
+        this.response = rng() * (max-min) + min;
     }
     GetResults(){
         console.log(this.response);
@@ -44,8 +44,38 @@ class SeededNumbers extends RandomNumbers {
 }
 class RandomList extends RandomNumbers{
 
+    constructor(seed, min, max) {
+        super();
+        this.list = [];
+        this.min = min;
+        this.max = max;
+        var rng = seedrandom(seed);
+        const loopCount = Math.round(rng() * (max-min) + min)
+        console.log(loopCount)
+        for(var i = 0; i < loopCount ; i++){
+            this.list.push(Math.random() * (max-min) + min  );
+        }
+    }
+    GetResults(){
+        console.log(this.list);
+        return this.list;
+    }
+    GetRounded(){
+        this.roundedlist = [];
+        for(var i = 0; i < this.list.length; i++){
+            console.log(this.list[i])
+            this.roundedlist.push(Math.round(this.list[i]));
+        }
+        console.log(this.roundedlist);
+        return this.roundedlist;
+    }
+    ListSelection(){
+        const listLength = this.roundedlist.length;
+        let test = Math.round(Math.random() * (listLength - 1))
+        console.log(this.roundedlist[test])
+        return this.roundedlist[test];
+    }
 }
-
 
 module.exports = {
     RandomNumbers : RandomNumbers,

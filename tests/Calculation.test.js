@@ -64,29 +64,43 @@ test('Test Get results for SquareRoot function', () => {
     let calculation = new Calculation.SingleVarCalculations(4,op);
     expect(calculation.GetResults()).toBe(2);
 });
-test('Test Get results for MinMaxNumbers function', () => {
+test('Test Get results for MinMaxNumbers function, Integers', () => {
     //I need to test the get results function
     let randomNumbers = new RandomNumbers.MinMaxNumber(1,2);
 
     expect(isInt(randomNumbers.GetRounded())).toBeTruthy();
 });
-test('Test Get results for MinMaxNumbers function', () => {
+test('Test Get results for MinMaxNumbers function, Floats', () => {
     //I need to test the get results function
     let randomNumbers = new RandomNumbers.MinMaxNumber(1,2);
 
     expect(isFloat(randomNumbers.GetResults())).toBeTruthy();
 });
-test('Test Get results for SeededNumbers function', () => {
+test('Test Get results for SeededNumbers function, Floats', () => {
     //I need to test the get results function
     let randomNumbers = new RandomNumbers.SeededNumbers("Hello",2,4);
 
     expect(isFloat(randomNumbers.GetResults())).toBeTruthy();
 });
-test('Test Get results for SeededNumbers function', () => {
+test('Test Get results for SeededNumbers function, Integers', () => {
     //I need to test the get results function
     let randomNumbers = new RandomNumbers.SeededNumbers("Hello",2,4);
 
     expect(isInt(randomNumbers.GetRounded())).toBeTruthy();
+});
+test('Test Get results for SeededNumbers function', () => {
+    //I need to test the get results function
+    let randomNumbers = new RandomNumbers.RandomList("Hello",5,9);
+
+    expect(isFloat(randomNumbers.GetResults()[0])).toBeTruthy();
+});
+test('Test Get results for SeededNumbers function', () => {
+    //I need to test the get results function
+    let randomNumbers = new RandomNumbers.RandomList("Hello",5,9);
+
+    expect(isInt(randomNumbers.GetRounded()[0])).toBeTruthy();
+    //Pulls a random number from the generated list above
+    expect(isInt(randomNumbers.ListSelection())).toBeTruthy();
 });
 
 function isInt(n){

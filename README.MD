@@ -5,8 +5,7 @@ Program Requirements
 
 Random Generator function
 1.	Set a seed and randomly select the same value from a list
-2.	Select N number of items from a list without a seed
-3.	Select N number of items from a list with a seed
+2.	Select N number of items from a list with a seed
 
 
 Population Sampling functions

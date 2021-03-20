@@ -101,6 +101,8 @@ test('Test Get results for SeededNumbers function', () => {
     expect(isInt(randomNumbers.GetRounded()[0])).toBeTruthy();
     //Pulls a random number from the generated list above
     expect(isInt(randomNumbers.ListSelection())).toBeTruthy();
+    //Pulls a random amount of numbers from the list
+    expect(isList(randomNumbers.RandomListSelection())).toBeTruthy();
 });
 
 function isInt(n){
@@ -109,4 +111,7 @@ function isInt(n){
 
 function isFloat(n){
     return Number(n) === n && n % 1 !== 0;
+}
+function isList(n){
+    return Array.isArray(n)
 }

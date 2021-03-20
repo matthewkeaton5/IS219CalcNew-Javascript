@@ -42,7 +42,18 @@ class ListCalculations extends Calculation{
         return this.op(this.ListOfValues);
     }
 }
-
+class SingleVarCalculations extends Calculation{
+    constructor(a,op) {
+        super();
+        if(allNum(a)){
+            this.a = a;
+            this.op = op;
+        }
+    }
+    GetResults() {
+        return this.op(this.a);
+    }
+}
 
 function allNum(numbers)
 {

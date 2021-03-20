@@ -66,6 +66,33 @@ test('Test Get results for SquareRoot function', () => {
 });
 test('Test Get results for MinMaxNumbers function', () => {
     //I need to test the get results function
-    let RandomNumbers = new RandomNumbers.MinMaxNumber(2,2);
-    expect(RandomNumbers.GetResults()).toBe(2);
+    let randomNumbers = new RandomNumbers.MinMaxNumber(1,2);
+
+    expect(isInt(randomNumbers.GetRounded())).toBeTruthy();
 });
+test('Test Get results for MinMaxNumbers function', () => {
+    //I need to test the get results function
+    let randomNumbers = new RandomNumbers.MinMaxNumber(1,2);
+
+    expect(isFloat(randomNumbers.GetResults())).toBeTruthy();
+});
+test('Test Get results for SeededNumbers function', () => {
+    //I need to test the get results function
+    let randomNumbers = new RandomNumbers.SeededNumbers("Fuck",2,4);
+
+    expect(isFloat(randomNumbers.GetResults())).toBeTruthy();
+});
+test('Test Get results for SeededNumbers function', () => {
+    //I need to test the get results function
+    let randomNumbers = new RandomNumbers.SeededNumbers("Fuck",2,4);
+
+    expect(isInt(randomNumbers.GetRounded())).toBeTruthy();
+});
+
+function isInt(n){
+    return Number(n) === n && n % 1 === 0;
+}
+
+function isFloat(n){
+    return Number(n) === n && n % 1 !== 0;
+}

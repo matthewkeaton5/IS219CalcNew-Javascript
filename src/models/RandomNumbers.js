@@ -1,3 +1,4 @@
+var seedrandom = require('seedrandom');
 class RandomNumbers {
 
 }
@@ -14,12 +15,39 @@ class MinMaxNumber extends RandomNumbers{
         this.randomNumber = test;
     }
     GetResults(){
+        console.log(this.randomNumber)
         return this.randomNumber;
     }
+    GetRounded(){
+        console.log(Math.round(this.randomNumber))
+        return Math.round(this.randomNumber)
+    }
 }
+class SeededNumbers extends RandomNumbers {
+    constructor(seed, min, max) {
+        super();
+        this.seed = seed;
+        this.min = min;
+        this.max = max;
+        seedrandom(seed, {global:true})
+        this.response = Math.random() * (max-min) + min;
+    }
+    GetResults(){
+        console.log(this.response);
+        return this.response;
+    }
+    GetRounded(){
+        console.log(Math.round(this.response));
+        return Math.round(this.response);
+    }
+}
+
+
 
 module.exports = {
     RandomNumbers : RandomNumbers,
     MinMaxNumber : MinMaxNumber,
+    SeededNumbers : SeededNumbers,
+
 
 }

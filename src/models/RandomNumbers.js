@@ -2,6 +2,7 @@ class RandomNumbers {
 
 }
 class MinMaxNumber extends RandomNumbers{
+    //added
     constructor(min, max) {
         super();
 

@@ -10,8 +10,8 @@
     "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "keywords": [],
-  "author": "Keith Williams",
-  "email": "keith@webizly.com",
+  "author": "Matthew Keaton, Gabriela Saboia Barrios",
+  "email": "gs525@njit.edu",
   "license": "ISC",
   "dependencies": {
     "csv": "^5.3.2",

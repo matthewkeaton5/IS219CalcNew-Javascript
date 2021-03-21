@@ -1,4 +1,13 @@
-function MeanDeviation (valueList) {//Will look up what this really means later
-    return 0;
+function MeanDeviation (valueList, mean) {//Will look up what this really means later
+    let distance;
+    let holder = 0;
+    let divisor = valueList.length;
+    valueList.forEach( number => function() {//inline function that computes the distance between the mean and
+        distance = Math.abs(mean - number); //each value in the list
+        holder += distance;//holder adds each new distance
+    })
+
+    return holder/divisor; //sum of all distances divided by the number of elements in the list
 }
+
 module.exports = MeanDeviation;

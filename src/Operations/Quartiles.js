@@ -1,4 +1,6 @@
-function Quartiles() {
+function Quartiles(valueList) {
+    valueList.sort();
+
     return 0;
 }
 

@@ -19,17 +19,17 @@ Population Sampling functions
 
 
 Descriptive Statistics functions
-1.	Mean
-2.	Median
-3.	Mode
+1.	**Mean**
+2.	**Median**
+3.	**Mode**
 4.	Variance
-5.	Standard Deviation
+5.	**Standard Deviation**
 6.	Quartiles
-7.	Skewness
-8.	Sample Correlation
+7.	**Skewness**
+8.	**Sample Correlation**
 9.	Population Correlation
-10.	Z-Score
-11.	Mean Deviation / Mean Absolute Deviation
+10.	**Z-Score**
+11.	**Mean Deviation / Mean Absolute Deviation**
 
 
 Additional Modules

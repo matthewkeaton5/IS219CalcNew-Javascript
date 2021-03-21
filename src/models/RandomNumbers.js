@@ -46,6 +46,7 @@ class RandomList extends RandomNumbers{
 
     constructor(seed, min, max) {
         super();
+        this.seed = seed;
         this.list = [];
         this.min = min;
         this.max = max;
@@ -77,13 +78,23 @@ class RandomList extends RandomNumbers{
     }
     RandomListSelection(){
         const listLength = this.roundedlist.length;
-        let test = Math.round(Math.random() * (listLength - 1));
-        let newList = [];
+        let test = Math.round(Math.random() * (listLength));
+        this.newList = [];
         for(var i = 0; i < test; i++){
-            newList.push(this.roundedlist[i]);
+            this.newList.push(this.roundedlist[i]);
         }
-        console.log(newList)
-        return newList
+        console.log(this.newList)
+        return this.newList
+    }
+    RandomSeededSelection(){
+        var rng = seedrandom(this.seed);
+        let test = Math.round(rng() * (this.roundedlist.length));
+        this.seededList = [];
+        for(var i = 0; i < test; i++){
+            this.seededList[i] = this.roundedlist[i];
+        }
+        console.log(this.seededList);
+        return this.seededList;
     }
 }
 

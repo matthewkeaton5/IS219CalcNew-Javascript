@@ -103,6 +103,8 @@ test('Test Get results for SeededNumbers function', () => {
     expect(isInt(randomNumbers.ListSelection())).toBeTruthy();
     //Pulls a random amount of numbers from the list
     expect(isList(randomNumbers.RandomListSelection())).toBeTruthy();
+    //Pulls a random amount of numbers based on the seed from the list
+    expect(isList(randomNumbers.RandomSeededSelection())).toBeTruthy();
 });
 
 function isInt(n){

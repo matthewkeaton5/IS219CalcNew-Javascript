@@ -12,7 +12,7 @@ class MinMaxNumber extends RandomNumbers{
 
 
 
-        this.randomNumber = Math.random() * (max-min) + min;
+        this.randomNumber = Math.random() * (max-min) + min ;
     }
     GetResults(){
         console.log(this.randomNumber)
@@ -71,9 +71,19 @@ class RandomList extends RandomNumbers{
     }
     ListSelection(){
         const listLength = this.roundedlist.length;
-        let test = Math.round(Math.random() * (listLength - 1))
-        console.log(this.roundedlist[test])
+        let test = Math.round(Math.random() * (listLength - 1));
+        console.log(this.roundedlist[test]);
         return this.roundedlist[test];
+    }
+    RandomListSelection(){
+        const listLength = this.roundedlist.length;
+        let test = Math.round(Math.random() * (listLength - 1));
+        let newList = [];
+        for(var i = 0; i < test; i++){
+            newList.push(this.roundedlist[i]);
+        }
+        console.log(newList)
+        return newList
     }
 }
 

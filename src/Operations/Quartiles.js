@@ -7,7 +7,6 @@ function Quartiles(valueList) {
     let q3 = q1*3; //defining quartile 3
     let value1; //defining a variable to store the value at the index defined by the division above
     let value2;
-    let dict = {};//initializing a dictionary to return all three values
 
     if (Number.isInteger(q1)){ //if the division returns a whole number
         value1 = (sorted[q1] + sorted[q1 + 1])/2;// add the values of the index location returned from the division and add the value of the next index location
@@ -22,7 +21,7 @@ function Quartiles(valueList) {
         value2 = sorted[q3]; //value2 receives the value at the index location q3
     }
 
-    return dict = {'quartile1': value1, 'quartile2': q2, 'quartile3': value2};
+    return {'quartile1': value1, 'quartile2': q2, 'quartile3': value2};
 }
 
 module.exports = Quartiles;

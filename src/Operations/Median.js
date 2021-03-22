@@ -1,8 +1,8 @@
-function Median(sortedList){
+function Median(valueList){
     let median = 0;
     let index1 = 0;
     let index2 = 0;
-
+    let sortedList = valueList.sort();
     let listLength = sortedList.length;
     if(listLength%2 === 0){
         index1 = listLength/2;

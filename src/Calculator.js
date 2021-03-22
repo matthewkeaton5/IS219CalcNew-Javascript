@@ -57,5 +57,10 @@ class Calculator {
         Calculator.Calculations.push(randomNumbers);
         return randomNumbers.GetResults();
     }
+
+    /*
+    definition of descriptive statistics static functions
+
+     */
 }
 module.exports = Calculator;

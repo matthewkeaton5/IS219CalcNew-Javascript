@@ -24,10 +24,10 @@ Descriptive Statistics functions
 3.	**Mode**
 4.	**Variance**
 5.	**Standard Deviation**
-6.	Quartiles
+6.	**Quartiles**
 7.	**Skewness**
 8.	**Sample Correlation**
-9.	Population Correlation
+9.	**Population Correlation**
 10.	**Z-Score**
 11.	**Mean Deviation / Mean Absolute Deviation**
 

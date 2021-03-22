@@ -1,4 +1,17 @@
 # IS219Calc-JavaScript
+Group Members that worked in this project:
+Matthew Keaton
+Gabriela Saboia Barrios
+
+This project was built upon our previous Calculator project, which each member has completed on their own.
+
+**Matthew Completed :**
+
+**Gabriela Completed :**
+Descriptive Statistics functions
+Descriptive Statistics test functions
+Statistics Model
+
 Program Requirements
 1.	Use random data for tests and be able to increase the number of calculations required i.e. be able to increase the list of numbers that the mean calculation is done on.  You can actually use built in libraries or 3rd party libraries to check your calculations that you complete yourself.  i.e. you can use the standard deviation function from a stats library to compute the correct value for your list of random numbers and then use that to test that your own calculation is correct for that list.
 

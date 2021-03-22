@@ -6,12 +6,12 @@ function Median(valueList){
     let listLength = sortedList.length;
     if(listLength%2 === 0){
         index1 = listLength/2;
-        index2 = index1+1;
+        index2 = index1 + 1;
         median = (sortedList[index1] + sortedList[index2])/2
     }
     else {
         index1 = Math.ceil(listLength/2)
-        median = sortedList[index]
+        median = sortedList[index1]
     }
     return median;
 }

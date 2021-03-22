@@ -5,5 +5,5 @@ class Statistics extends Calculation.ListCalculations{
     constructor(ListOfValues, op){//Constructor definition, design pattern specific to JavaScript
         super(ListOfValues, op);//defining which constructor values are passed through inheritance
     }
-
 }
+module.exports = Statistics;

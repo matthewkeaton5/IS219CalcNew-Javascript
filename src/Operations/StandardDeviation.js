@@ -1,4 +1,6 @@
+import {standardDeviation} from "simple-statistics";
+
 function StandardDeviation(valueList){
-    return Math.std(valueList);
+    return standardDeviation(valueList);
 }
 module.exports = StandardDeviation;

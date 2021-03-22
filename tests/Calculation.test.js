@@ -7,6 +7,16 @@ const Product = require('../src/Operations/Product');
 const Quotient = require('../src/Operations/Quotient');
 const Square = require('../src/Operations/Square');
 const SquareRoot = require('../src/Operations/SquareRoot');
+//discriptive statistics require statements
+const Mean = require('../src/Operations/Mean');
+const Median = require('../src/Operations/Median');
+const Quartiles = require('../src/Operations/Quartiles');
+const MeanDeviation = require('../src/Operations/MeanDeviation');
+const Variance = require('../src/Operations/Variance');
+const StandardDeviation = require('../src/Operations/StandardDeviation');
+const Skewness = require('../src/Operations/Skewness');
+const Mode = require('../src/Operations/Mode');
+
 test('Test of Calculation Instantiation', () => {
     //I need to test the instantiation of the calculation object
     let op = Sum
@@ -117,3 +127,58 @@ function isFloat(n){
 function isList(n){
     return Array.isArray(n)
 }
+
+/*
+discriptive statistics tests for operations with one list as a parameter
+ */
+
+test('Test  Mean calculation', () => {
+    //I need to test the get results function
+    let op = Mean;
+    let calculation = new Calculation.ListCalculations([1,2,3], op);
+    expect(calculation.GetResults()).toBe(2);
+});
+
+test('Test  Median calculation', () => {
+    //I need to test the get results function
+    let op = Median;
+    let calculation = new Calculation.ListCalculations([1,2,3], op);
+    expect(calculation.GetResults()).toBe(2);
+});
+
+test('Test  Skewness calculation', () => {
+    //I need to test the get results function
+    let op = Skewness;
+    let calculation = new Calculation.ListCalculations([2, 4, 6, 3, 1], op);
+    expect(calculation.GetResults()).toBe(0.59);
+});
+test('Test  Variance calculation', () => {
+    //I need to test the get results function
+    let op = Variance;
+    let calculation = new Calculation.ListCalculations([1, 2, 3, 4, 5, 6], op);
+    expect(calculation.GetResults()).toBe(2.917);
+});
+test('Test  Quartiles calculation', () => {
+    //I need to test the get results function
+    let op = Quartiles;
+    let calculation = new Calculation.ListCalculations([1, 2, 3, 4, 5, 6], op);
+    expect(calculation.GetResults()).toBe({'quartile1': 2, 'quartile2': 3.5, 'quartile3': 5});
+});
+test('Test  Standard Deviation calculation', () => {
+    //I need to test the get results function
+    let op = StandardDeviation;
+    let calculation = new Calculation.ListCalculations([2, 4, 4, 4, 5, 5, 7, 9], op);
+    expect(calculation.GetResults()).toBe(2);
+});
+test('Test  Mean Deviation calculation', () => {
+    //I need to test the get results function
+    let op = MeanDeviation;
+    let calculation = new Calculation.ListCalculations([2, 4, 4, 4, 5, 5, 7, 9], op);
+    expect(calculation.GetResults()).toBe(1.5);
+});
+test('Test  Mode calculation', () => {
+    //I need to test the get results function
+    let op = Mode;
+    let calculation = new Calculation.ListCalculations([2, 4, 4, 4, 5, 5, 7, 9], op);
+    expect(calculation.GetResults()).toBe(4);
+});

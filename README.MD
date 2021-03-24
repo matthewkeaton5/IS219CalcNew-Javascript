@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/matthewkeaton5/IS219CalcNew-Javascript/badge.svg?branch=master)](https://coveralls.io/github/matthewkeaton5/IS219CalcNew-Javascriptbranch=master)
+[![Build Status](https://travis-ci.com/kaw393939/is219hello.svg?branch=master)](https://travis-ci.com/kaw393939/is219hello)
+
 # IS219Calc-JavaScript
 Group Members that worked in this project:
 Matthew Keaton

@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/matthewkeaton5/IS219CalcNew-Javascript/badge.svg?branch=master)](https://coveralls.io/github/matthewkeaton5/IS219CalcNew-Javascriptbranch=master)
+[![Coverage Status](https://coveralls.io/github/matthewkeaton5/IS219CalcNew-Javascript/badge.svg?branch=master)](https://coveralls.io/github/matthewkeaton5/IS219CalcNew-Javascript)
 [![Build Status](https://travis-ci.com/matthewkeaton5/IS219CalcNew-Javascript.svg?branch=master)](https://travis-ci.com/matthewkeaton5/IS219CalcNew-Javascript)
 
 # IS219Calc-JavaScript

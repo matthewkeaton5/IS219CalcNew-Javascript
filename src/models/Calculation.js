@@ -92,5 +92,4 @@ module.exports = {
     SimpleCalculation : SimpleCalculation,
     ListCalculations : ListCalculations,
     SingleVarCalculations : SingleVarCalculations,
-
-}
+};

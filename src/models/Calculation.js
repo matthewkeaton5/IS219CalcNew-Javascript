@@ -1,7 +1,7 @@
 window.alert = jest.fn();
 class Calculation {
     error(){
-        let errorText = "Change calculation type"
+        let errorText = "Change calculation type";
         alert(errorText);
     }
     toString() {
@@ -58,8 +58,8 @@ class SingleVarCalculations extends Calculation{
 function allNum(numbers)
 {
     var letters = /[^A-Za-z]+$/;
-    var test = String(numbers).match(letters)
-    if(test == [])
+    var test = String(numbers).match(letters);
+    if(test === [])
     {
         alert('Please input numeric characters only');
         return false;
@@ -71,8 +71,8 @@ function allNum(numbers)
 }
 
 function divZero(b){
-    if(b == 0){
-        window.alert("Cannot Add an Empty List")
+    if(b === 0){
+        window.alert("Cannot Add an Empty List");
         return false;
     }else{
         return true;
@@ -82,7 +82,7 @@ function listCheck(ListOfValues){
     if(ListOfValues != null){
         return true;
     }else{
-        alert("Cannot Add an Empty List")
+        alert("Cannot Add an Empty List");
         return false;
     }
 }

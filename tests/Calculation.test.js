@@ -124,8 +124,7 @@ function isList(n){
 /*
 discriptive statistics tests for operations with one list as a parameter
  */
-
-test('Test  Mean calculation', () => {
+/*test('Test  Mean calculation', () => {
     //I need to test the get results function
     let op = Mean;
     let calculation = new Calculation.ListCalculations([1,2,3], op);
@@ -174,4 +173,4 @@ test('Test  Mode calculation', () => {
     let op = Mode;
     let calculation = new Calculation.ListCalculations([2, 4, 4, 4, 5, 5, 7, 9], op);
     expect(calculation.GetResults()).toBe(4);
-});
+});*/

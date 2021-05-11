@@ -1,5 +1,5 @@
 const Calculation = require('../src/models/Calculation');
-const RandomNumbers = require('../src/models/RandomNumbers')
+const RandomNumbers = require('../src/models/RandomNumbers');
 const Sum = require('../src/Operations/Sum');
 const listSum = require('../src/Operations/listSum');
 const Difference = require('../src/Operations/Difference');
@@ -8,14 +8,7 @@ const Quotient = require('../src/Operations/Quotient');
 const Square = require('../src/Operations/Square');
 const SquareRoot = require('../src/Operations/SquareRoot');
 //discriptive statistics require statements
-const Mean = require('../src/Operations/Mean');
-const Median = require('../src/Operations/Median');
-const Quartiles = require('../src/Operations/Quartiles');
-const MeanDeviation = require('../src/Operations/MeanDeviation');
-const Variance = require('../src/Operations/Variance');
-const StandardDeviation = require('../src/Operations/StandardDeviation');
-const Skewness = require('../src/Operations/Skewness');
-const Mode = require('../src/Operations/Mode');
+
 
 test('Test of Calculation Instantiation', () => {
     //I need to test the instantiation of the calculation object
